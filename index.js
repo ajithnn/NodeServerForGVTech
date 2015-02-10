@@ -37,7 +37,7 @@ res.send("none");
 
 app.use(bodyParser.json()); // or handling POST requests with application/json as content-type.
 //app.use(connect.bodyParser({strict: false}));
-var server = app.listen(3000, function () { //  Start the server on port 3000.
+var server = app.listen(process.env.PORT || 3000, function () { //  Start the server on port 3000.
 
   var host = server.address().address
   var port = server.address().port
